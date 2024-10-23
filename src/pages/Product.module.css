@@ -57,3 +57,7 @@
     margin-top: 20px; /* Отступ сверху */
   }
   
+
+a{
+  text-decoration: none;
+}

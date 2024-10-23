@@ -15,10 +15,10 @@ export function useProduct() {
 
     useEffect(() => {
         if (isSuccess) console.log('Data successes', data)
-    }, [isSuccess, data]) 
+    }, [isSuccess, data])
 
     useEffect(() => {
         if (isError) console.log('Data fetch error')
-    }, [isError]) 
+    }, [isError])
     return { data, isLoading, isSuccess, isError };
 }

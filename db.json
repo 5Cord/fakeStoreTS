@@ -75,6 +75,18 @@
   ],
   "cart": [
     {
+      "id": "2e68",
+      "title": "Игровой компьютер среднего уровня",
+      "price": 75000,
+      "category": "Game PC",
+      "specs": {
+        "processor": "Intel Core i5-12400F",
+        "ram": "16GB DDR4",
+        "graphics": "NVIDIA GeForce GTX 1660 Super",
+        "storage": "1TB HDD + 256GB SSD"
+      }
+    },
+    {
       "id": "900d",
       "title": "Игровой компьютер высокого уровня",
       "price": 120000,
@@ -84,30 +96,6 @@
         "ram": "32GB DDR4",
         "graphics": "NVIDIA GeForce RTX 3060 Ti",
         "storage": "1TB SSD"
-      }
-    },
-    {
-      "id": "6766",
-      "title": "Рабочая станция для дизайна",
-      "price": 95000,
-      "category": "WorkStation",
-      "specs": {
-        "processor": "Intel Core i7-12700K",
-        "ram": "32GB DDR4",
-        "graphics": "NVIDIA GeForce RTX 3070",
-        "storage": "2TB SSD"
-      }
-    },
-    {
-      "id": "6766",
-      "title": "Рабочая станция для дизайна",
-      "price": 95000,
-      "category": "WorkStation",
-      "specs": {
-        "processor": "Intel Core i7-12700K",
-        "ram": "32GB DDR4",
-        "graphics": "NVIDIA GeForce RTX 3070",
-        "storage": "2TB SSD"
       }
     }
   ],

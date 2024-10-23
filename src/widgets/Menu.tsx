@@ -6,6 +6,7 @@ import HomePage from '../pages/HomePage';
 import ProductPage from '../pages/ProductPage';
 import useAddProductToCart from '../process/useAddProductToCart';
 import { useGetCart } from '../process/useGetCart';
+import Product from '../pages/Product';
 
 export default function Menu() {
     const { data, isLoading } = useGetCart();
@@ -95,6 +96,7 @@ export default function Menu() {
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path='products' element={<ProductPage updateCart={handleAddProduct} />} />
+                <Route path='product/:id' element={<Product />} />
             </Routes>
         </>
     );

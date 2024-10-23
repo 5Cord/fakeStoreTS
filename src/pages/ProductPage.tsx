@@ -3,6 +3,7 @@ import cl from './Product.module.css';
 import { Product } from '../interface/AddProduct';
 import useAddProductToCart from '../process/useAddProductToCart';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function ProductPage() {
   const { data, isLoading } = useProduct();
@@ -57,18 +58,20 @@ export default function ProductPage() {
         ) : (
           filterCategoryData.map((product: Product, index: number) => (
             <div key={index} className={cl.card}>
-              <div className={cl.title}>{product.title}</div>
-              <div className={cl.price}>{`Цена: ${product.price} руб.`}</div>
-              {product.specs && (
-                <div className={cl.specs}>
-                  <h4>Характеристики:</h4>
-                  <ul>
-                    {Object.entries(product.specs).map(([key, value]) => (
-                      <li key={key}>{`${key}: ${value}`}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              <Link to={`/product/${product.id}`} className={cl.link}>
+                <div className={cl.title}>{product.title}</div>
+                <div className={cl.price}>{`Цена: ${product.price} руб.`}</div>
+                {product.specs && (
+                  <div className={cl.specs}>
+                    <h4>Характеристики:</h4>
+                    <ul>
+                      {Object.entries(product.specs).map(([key, value]) => (
+                        <li key={key}>{`${key}: ${value}`}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </Link>
               <button onClick={() => addProductToCart(product)}>В корзину</button>
             </div>
           ))
